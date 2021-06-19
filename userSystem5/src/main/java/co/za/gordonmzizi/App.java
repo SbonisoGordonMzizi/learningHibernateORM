@@ -5,6 +5,7 @@ import javax.persistence.EntityTransaction;
 import co.za.gordonmzizi.persistencelayer.Users;
 import javax.persistence.Persistence;
 
+
 public class App 
 {
     public static void main( String[] args ) {
@@ -17,16 +18,16 @@ public class App
             entityManager = entityManagerFactory.createEntityManager();
 
             Users user1 = new Users();
-            user1.setFirstname("Bob");
-            user1.setLastname("Smith");
+            user1.setFirstname("bee");
+            user1.setLastname("love");
 
             Users user2 = new Users();
-            user2.setFirstname("Jerry");
-            user2.setLastname("White");
+            user2.setFirstname("Gordon");
+            user2.setLastname("Brown");
 
             Users user3 = new Users();
-            user3.setFirstname("tom");
-            user3.setLastname("lorry");
+            user3.setFirstname("Van");
+            user3.setLastname("Man");
 
             transaction = entityManager.getTransaction();
             transaction.begin();
