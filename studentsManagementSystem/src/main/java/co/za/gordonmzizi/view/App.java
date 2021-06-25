@@ -1,9 +1,6 @@
 package co.za.gordonmzizi.view;
 
-import co.za.gordonmzizi.persistance.Address;
-import co.za.gordonmzizi.persistance.Parent;
-import co.za.gordonmzizi.persistance.Teacher;
-import co.za.gordonmzizi.persistance.Student;
+import co.za.gordonmzizi.persistance.*;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.MetadataSources;
@@ -25,6 +22,7 @@ public class App {
             session = sessionfactory.openSession();
             transaction = session.getTransaction();
 
+            //person objects
             Parent parentForSteve = new Parent();
             parentForSteve.setFirstName("Bob");
             parentForSteve.setSecondName("Tank");
@@ -49,10 +47,11 @@ public class App {
             studentSteve.setAge(12);
             studentSteve.setPersonType("Student");
 
+            // address objects
             Address steveAddress = new Address();
             steveAddress.setStreet("123 King long");
             steveAddress.setCity("East Rand");
-            steveAddress.setProvince("autang");
+            steveAddress.setProvince("Gautang");
             steveAddress.setCountry("South Africa");
             steveAddress.setZipCode(3123);
             studentSteve.setAddress(steveAddress);
@@ -60,19 +59,37 @@ public class App {
             Address parentAddress = new Address();
             parentAddress.setStreet("123 King long");
             parentAddress.setCity("East Rand");
-            parentAddress.setProvince("autang");
+            parentAddress.setProvince("Gautang");
             parentAddress.setCountry("South Africa");
             parentAddress.setZipCode(3123);
             parentForSteve.setAddress(parentAddress);
 
-
             Address teacherAddress = new Address();
             teacherAddress.setStreet("992 west");
             teacherAddress.setCity("springs");
-            teacherAddress.setProvince("autang");
+            teacherAddress.setProvince("Gautang");
             teacherAddress.setCountry("South Africa");
             teacherAddress.setZipCode(3123);
             teacherMath.setAddress(teacherAddress);
+
+            //Contact objects
+            Contact parentContact = new Contact();
+            parentContact.setCellNo("0724375874");
+            parentContact.setPhoneNo("0311123097");
+            parentContact.setEmail("bobsmith@jobme.com");
+            parentForSteve.setContact(parentContact);
+
+            Contact teacherContact = new Contact();
+            teacherContact.setCellNo("0811234567");
+            teacherContact.setPhoneNo("031 6764383");
+            teacherContact.setEmail("icewhite@school.com");
+            teacherMath.setContact(teacherContact);
+
+            Contact steveContact = new Contact();
+            steveContact.setCellNo("0712345621");
+            steveContact.setPhoneNo("0110923324");
+            steveContact.setEmail("stevesmith@jobme.com");
+            studentSteve.setContact(steveContact);
 
             transaction.begin();
             session.persist(parentForSteve);
