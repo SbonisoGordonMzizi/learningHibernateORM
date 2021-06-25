@@ -91,6 +91,13 @@ public class App {
             steveContact.setEmail("stevesmith@jobme.com");
             studentSteve.setContact(steveContact);
 
+            //parent,student and teacher relationship
+            parentForSteve.getStudents().add(studentSteve);
+            studentSteve.setParent(parentForSteve);
+            studentSteve.getTeachers().add(teacherMath);
+            teacherMath.getStudents().add(studentSteve);
+
+
             transaction.begin();
             session.persist(parentForSteve);
             session.persist(studentSteve);
