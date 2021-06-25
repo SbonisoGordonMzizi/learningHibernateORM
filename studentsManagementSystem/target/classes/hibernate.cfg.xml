@@ -14,15 +14,9 @@
         <mapping class="co.za.gordonmzizi.persistance.Address"/>
         <mapping class="co.za.gordonmzizi.persistance.Subject"/>
         <mapping class="co.za.gordonmzizi.persistance.Contact"/>
-        <mapping class="co.za.gordonmzizi.persistance.StudentAddress"/>
         <mapping class="co.za.gordonmzizi.persistance.Student"/>
-        <mapping class="co.za.gordonmzizi.persistance.StudentContact"/>
         <mapping class="co.za.gordonmzizi.persistance.Teacher"/>
-        <mapping class="co.za.gordonmzizi.persistance.TeacherAddress"/>
-        <mapping class="co.za.gordonmzizi.persistance.TeacherContact"/>
         <mapping class="co.za.gordonmzizi.persistance.Parent"/>
-        <mapping class="co.za.gordonmzizi.persistance.ParentAddress"/>
-        <mapping class="co.za.gordonmzizi.persistance.ParentContact"/>
         <mapping class="co.za.gordonmzizi.persistance.Person"/>
 
     </session-factory>

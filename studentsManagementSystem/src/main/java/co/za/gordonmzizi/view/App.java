@@ -1,6 +1,6 @@
 package co.za.gordonmzizi.view;
 
-import co.za.gordonmzizi.persistance.Person;
+import co.za.gordonmzizi.persistance.Address;
 import co.za.gordonmzizi.persistance.Parent;
 import co.za.gordonmzizi.persistance.Teacher;
 import co.za.gordonmzizi.persistance.Student;
@@ -49,10 +49,36 @@ public class App {
             studentSteve.setAge(12);
             studentSteve.setPersonType("Student");
 
+            Address steveAddress = new Address();
+            steveAddress.setStreet("123 King long");
+            steveAddress.setCity("East Rand");
+            steveAddress.setProvince("autang");
+            steveAddress.setCountry("South Africa");
+            steveAddress.setZipCode(3123);
+            studentSteve.setAddress(steveAddress);
+
+            Address parentAddress = new Address();
+            parentAddress.setStreet("123 King long");
+            parentAddress.setCity("East Rand");
+            parentAddress.setProvince("autang");
+            parentAddress.setCountry("South Africa");
+            parentAddress.setZipCode(3123);
+            parentForSteve.setAddress(parentAddress);
+
+
+            Address teacherAddress = new Address();
+            teacherAddress.setStreet("992 west");
+            teacherAddress.setCity("springs");
+            teacherAddress.setProvince("autang");
+            teacherAddress.setCountry("South Africa");
+            teacherAddress.setZipCode(3123);
+            teacherMath.setAddress(teacherAddress);
+
             transaction.begin();
             session.persist(parentForSteve);
             session.persist(studentSteve);
             session.persist(teacherMath);
+
             transaction.commit();
             System.out.println("Transaction Completed");
 
