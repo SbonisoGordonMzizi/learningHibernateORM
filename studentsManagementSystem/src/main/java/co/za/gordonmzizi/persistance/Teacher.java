@@ -1,4 +1,8 @@
 package co.za.gordonmzizi.persistance;
 
-public class Teacher {
+import javax.persistence.Entity;
+
+@Entity
+public class Teacher extends Person{
+
 }

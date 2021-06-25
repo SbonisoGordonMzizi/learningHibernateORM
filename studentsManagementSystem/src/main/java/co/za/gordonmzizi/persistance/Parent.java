@@ -1,4 +1,7 @@
 package co.za.gordonmzizi.persistance;
 
-public class Parent {
+import javax.persistence.Entity;
+
+@Entity
+public class Parent extends Person {
 }

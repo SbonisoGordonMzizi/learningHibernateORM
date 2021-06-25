@@ -1,4 +1,9 @@
 package co.za.gordonmzizi.persistance;
 
-public class Student {
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+
+@Entity
+public class Student extends Person{
+
 }
